@@ -779,17 +779,15 @@ def show_home():
                     st.rerun()
 
         with col_img:
-            # Standalone image without double container margins to reduce white space
-            
+            eco_hero_path = os.path.join(
+        os.path.dirname(__file__),
+        "frontend2",
+        "assets",
+        "eco_hero.png"
+    )
+        st.image(eco_hero_path, use_container_width=True)
 
-eco_hero_path = os.path.join(
-    os.path.dirname(__file__),
-    "frontend2",
-    "assets",
-    "eco_hero.png"
-)
 
-st.image(eco_hero_path, use_container_width=True)
     # Dynamic Ocean Plastic Counter Card
     current_time = time.time()
     start_of_year = datetime(datetime.now().year, 1, 1).timestamp()
