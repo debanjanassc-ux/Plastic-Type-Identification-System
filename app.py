@@ -780,7 +780,8 @@ def show_home():
 
         with col_img:
             # Standalone image without double container margins to reduce white space
-            st.image("C:/Users/Admin/Desktop/PlasticTtype Identification System/frontend2/assets/eco_hero.png", use_container_width=True)
+            eco_hero_path = os.path.join(os.path.dirname(__file__), "frontend2", "assets", "eco_hero.png")
+            st.image(eco_hero_path, use_container_width=True)
 
     # Dynamic Ocean Plastic Counter Card
     current_time = time.time()
